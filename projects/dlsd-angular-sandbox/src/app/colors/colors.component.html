@@ -1,0 +1,17 @@
+<h1>Colors</h1>
+
+<div class="container">
+  <div class="row">
+    @for (level of [0, 1, 2]; track $index) {
+      <div class="color {{ 'black-' + level }}"></div>
+    }
+  </div>
+  
+  @for (color of BASIC_COLORS; track $index) {
+    <div class="row">
+      @for (level of [1, 2, 3, 4, 5]; track $index) {
+        <div class="color {{ color + '-' + level }}"></div>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,38 @@
+@use 'colors';
+@use "sass:map";
+
+$colors: (
+  "black": ("0": colors.$black-0, "1": colors.$black-1, "2": colors.$black-2),
+  "red": ("1": colors.$red-1, "2": colors.$red-2, "3": colors.$red-3, "4": colors.$red-4, "5": colors.$red-5),
+  "green": ("1": colors.$green-1, "2": colors.$green-2, "3": colors.$green-3, "4": colors.$green-4, "5": colors.$green-5),
+  "blue": ("1": colors.$blue-1, "2": colors.$blue-2, "3": colors.$blue-3, "4": colors.$blue-4, "5": colors.$blue-5),
+  "yellow": ("1": colors.$yellow-1, "2": colors.$yellow-2, "3": colors.$yellow-3, "4": colors.$yellow-4, "5": colors.$yellow-5),
+  "lime": ("1": colors.$lime-1, "2": colors.$lime-2, "3": colors.$lime-3, "4": colors.$lime-4, "5": colors.$lime-5),
+  "pink": ("1": colors.$pink-dark-1, "2": colors.$pink-dark-2, "3": colors.$pink-dark-3, "4": colors.$pink-dark-4, "5": colors.$pink-dark-5),
+  "gray-blue": ("1": colors.$gray-blue-1, "2": colors.$gray-blue-2, "3": colors.$gray-blue-3, "4": colors.$gray-blue-4, "5": colors.$gray-blue-5)
+  );
+$basic-color-levels: 1, 2, 3, 4, 5;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+}
+
+@each $color-name, $color-group in $colors {
+  @each $color-level, $color-value in $color-group {
+    .#{$color-name}-#{$color-level} {
+      background: $color-value;
+    }
+  }
+}

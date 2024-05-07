@@ -1,0 +1,220 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.8",
+  "deps": {
+    "@angular/animations": "^17.0.0",
+    "@angular/common": "^17.0.0",
+    "@angular/compiler": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/forms": "^17.0.0",
+    "@angular/platform-browser": "^17.0.0",
+    "@angular/platform-browser-dynamic": "^17.0.0",
+    "@angular/router": "^17.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.2",
+    "@angular-devkit/build-angular": "^17.1.1",
+    "@angular-eslint/builder": "17.2.1",
+    "@angular-eslint/eslint-plugin": "17.2.1",
+    "@angular-eslint/eslint-plugin-template": "17.2.1",
+    "@angular-eslint/schematics": "17.2.1",
+    "@angular-eslint/template-parser": "17.2.1",
+    "@angular/cli": "^17.0.5",
+    "@angular/compiler-cli": "^17.0.0",
+    "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
+    "eslint": "^8.56.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.1.0",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {
+    "dlsd-angular-ui": [
+      "./dist/dlsd-angular-ui"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17117732178709211847"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "13572687148236643035"
+      },
+      {
+        "file": "angular.json",
+        "hash": "16820308559201943219"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "17031839911632110937"
+      },
+      {
+        "file": "package.json",
+        "hash": "7249382236834177788"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/package.json",
+        "hash": "6015435649132805553"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.component.html",
+        "hash": "9937850167869541798"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.component.spec.ts",
+        "hash": "13179311982986645423"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.component.ts",
+        "hash": "3441837544336782144"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/app.routes.ts",
+        "hash": "14124455061817661584"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/colors/colors.component.html",
+        "hash": "9883549429287846382"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/colors/colors.component.scss",
+        "hash": "17842347586503358797"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/colors/colors.component.spec.ts",
+        "hash": "2287566994716379766"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/app/colors/colors.component.ts",
+        "hash": "6519014778069435319"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/index.html",
+        "hash": "1205546442648332880"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/src/styles.scss",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/dlsd-angular-sandbox/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/.eslintrc.json",
+        "hash": "14363505610686800042"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/README.md",
+        "hash": "10880924363075984175"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/ng-package.json",
+        "hash": "10756714542796568754"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/package.json",
+        "hash": "5738089314185882085"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/lib/dlsd-angular-ui.component.spec.ts",
+        "hash": "446688792414235391"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/lib/dlsd-angular-ui.component.ts",
+        "hash": "711141799688752696"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/lib/dlsd-angular-ui.service.spec.ts",
+        "hash": "11766923212411867384"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/lib/dlsd-angular-ui.service.ts",
+        "hash": "2923886500866807048"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/public-api.ts",
+        "hash": "1771376871639586139"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/src/styles/_colors.scss",
+        "hash": "11915247221630247149"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/tsconfig.lib.json",
+        "hash": "3854248313799891276"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/tsconfig.lib.prod.json",
+        "hash": "6958467553555132988"
+      },
+      {
+        "file": "projects/dlsd-angular-ui/tsconfig.spec.json",
+        "hash": "6187331034101419811"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "15832656482855549182"
+      }
+    ]
+  }
+}
