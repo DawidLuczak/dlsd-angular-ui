@@ -1,0 +1,9 @@
+export enum DeclensionType {
+  NOMINATIVE,
+  GENITIVE,
+  DATIVE,
+  ACCUSATIVE,
+  INSTRUMENTAL,
+  LOCATIVE,
+  VOCATIVE
+}

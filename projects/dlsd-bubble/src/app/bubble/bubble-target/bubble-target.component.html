@@ -1,0 +1,5 @@
+<button class="active" (click)="toggleList()" (keydown.enter)="toggleList()">{{target()?.text ?? 'W ogóle...'}}</button>
+
+@if (expanded()) {
+  <app-bubble-target-list [bubble]="target()"></app-bubble-target-list>
+}

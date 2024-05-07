@@ -1,0 +1,10 @@
+:host {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px 32px;
+  border: 1px solid gray;
+}
+
+button {
+  background: white;
+  border: 1px solid darkblue;
+}
