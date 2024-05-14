@@ -1,0 +1,14 @@
+<div class="tooltip f-regular-1">
+  <span
+    *ngLet="(config.position$ | async)! as position"
+    class="tooltip-arrow"
+    [style.left.px]="position.arrowX"
+    [style.bottom.px]="position.arrowY"
+  ></span>
+
+  @if (contextAsString(); as string) {
+  {{ string | translate }}
+  } @if (contextAsTemplate(); as template) {
+  <ng-template [ngTemplateOutlet]="template"></ng-template>
+  }
+</div>

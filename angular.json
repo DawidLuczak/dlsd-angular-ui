@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/dlsd-angular-ui",
       "sourceRoot": "projects/dlsd-angular-ui/src",
-      "prefix": "lib",
+      "prefix": "dlsd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
