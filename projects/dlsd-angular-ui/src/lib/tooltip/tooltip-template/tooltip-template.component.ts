@@ -9,7 +9,6 @@ import {
   computed,
   signal,
 } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { NgLetModule } from 'ng-let';
 import { Observable } from 'rxjs';
 
@@ -27,7 +26,7 @@ export const TOOLTIP_CONFIG = new InjectionToken<TooltipConfig>(
 @Component({
   selector: 'lib-tooltip',
   standalone: true,
-  imports: [NgLetModule, AsyncPipe, NgTemplateOutlet, TranslateModule],
+  imports: [NgLetModule, AsyncPipe, NgTemplateOutlet],
   templateUrl: './tooltip-template.component.html',
   styleUrls: ['./tooltip-template.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

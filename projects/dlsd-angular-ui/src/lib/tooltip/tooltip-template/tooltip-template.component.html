@@ -7,7 +7,7 @@
   ></span>
 
   @if (contextAsString(); as string) {
-  {{ string | translate }}
+  {{ string }}
   } @if (contextAsTemplate(); as template) {
   <ng-template [ngTemplateOutlet]="template"></ng-template>
   }
