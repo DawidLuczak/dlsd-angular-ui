@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "build:ui": "ng build dlsd-angular-ui"
+    "build:ui": "ng build dlsd-angular-ui",
+    "start:ui": "ng build dlsd-angular-ui --watch"
   },
   "private": true,
   "dependencies": {
