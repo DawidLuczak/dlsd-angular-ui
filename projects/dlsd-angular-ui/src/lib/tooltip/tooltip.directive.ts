@@ -16,7 +16,7 @@ import { TooltipService } from './tooltip.service';
 })
 export class TooltipDirective {
   public tooltipContext = input.required<TooltipContext | undefined>({
-    alias: 'onyxTooltip',
+    alias: 'libTooltip',
   });
   public tooltipArrowOffsets = input<{
     x?: number;
@@ -49,12 +49,7 @@ export class TooltipDirective {
       this.elementRef,
       this.viewContainerRef,
       tooltipContext,
-      this.tooltipArrowOffsets(),
-      this.tooltipPositions(),
-      this.tooltipTargetRef(),
-      this.tooltipDelay(),
-      this.tooltipHostCss(),
-      this.tooltipOverridePositions()
+      this.tooltipArrowOffsets()
     );
   }
 

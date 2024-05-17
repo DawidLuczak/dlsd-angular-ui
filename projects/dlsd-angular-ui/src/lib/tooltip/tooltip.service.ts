@@ -1,9 +1,7 @@
 import { ConnectedPosition } from '@angular/cdk/overlay';
 import { ElementRef, Injectable, ViewContainerRef } from '@angular/core';
 import { BehaviorSubject, filter, fromEvent, takeUntil, timer } from 'rxjs';
-import overlayPositions, {
-  OverlayPosition,
-} from '../overlay/overlay-positions';
+import overlayPositions from '../overlay/overlay-positions';
 import { OverlayService } from '../overlay/overlay.service';
 import {
   TOOLTIP_CONFIG,
@@ -39,11 +37,7 @@ export class TooltipService {
       calculateY?: boolean;
       calculateX?: boolean;
     } = { x: 0, y: 0 },
-    positions: OverlayPosition[] = [],
-    targetElementRef: HTMLElement | undefined = undefined,
-    delay = 0,
-    hostCss: string[] = [],
-    overridePositions: Partial<ConnectedPosition> = {}
+    delay = 0
   ): void {
     this.detachTooltip();
     this.subscribeMouseEvent(sourceRef);
@@ -51,13 +45,7 @@ export class TooltipService {
     timer(delay)
       .pipe(takeUntil(this.overlayService.detach$))
       .subscribe(() => {
-        this.createOverlayWithPositions(
-          sourceRef,
-          positions,
-          targetElementRef,
-          hostCss,
-          overridePositions
-        );
+        this.createOverlayWithPositions(sourceRef);
         this.createTooltipAndAttachToOverlay(context, viewContainerRef);
 
         setTimeout(() => {
@@ -99,27 +87,15 @@ export class TooltipService {
     });
   }
 
-  private createOverlayWithPositions(
-    sourceRef: ElementRef,
-    positions: OverlayPosition[] = [],
-    targetElementRef?: HTMLElement,
-    hostCss: string[] = [],
-    overridePositions: Partial<ConnectedPosition> = {}
-  ): void {
-    const offsetY = targetElementRef
-      ? sourceRef.nativeElement.getBoundingClientRect().top -
-        targetElementRef.getBoundingClientRect().top
-      : 0;
-    const overlayPositions = this.getOverlayPositions(positions, offsetY).map(
-      (position) => ({
-        ...position,
-        panelClass: [...(position.panelClass as string[]), ...hostCss],
-        ...overridePositions,
-      })
-    );
+  private createOverlayWithPositions(sourceRef: ElementRef): void {
+    // const overlayPositions = this.getOverlayPositions().map((position) => ({
+    //   ...position,
+    //   panelClass: [...(position.panelClass as string[]), ...hostCss],
+    //   ...overridePositions,
+    // }));
     const positionStrategy = this.overlayService.defaultPositionStrategy(
-      targetElementRef ?? sourceRef.nativeElement,
-      overlayPositions
+      sourceRef.nativeElement,
+      [overlayPositions.positionStrategyTop()]
     );
     this.overlayService.createOverlay(sourceRef, {
       positionStrategy,
@@ -128,52 +104,8 @@ export class TooltipService {
     });
   }
 
-  private getOverlayPositions(
-    positions: OverlayPosition[] = [],
-    offsetY = 0
-  ): ConnectedPosition[] {
-    if (!positions.length) {
-      return [
-        overlayPositions.positionStrategyTop(),
-        overlayPositions.positionStrategyBottom(),
-        overlayPositions.positionStrategyLeft(),
-        overlayPositions.positionStrategyRight(),
-      ];
-    }
-
-    const overrideOverlayPositions: ConnectedPosition[] = [];
-
-    for (const position of positions) {
-      switch (position) {
-        case OverlayPosition.LEFT:
-          overrideOverlayPositions.push({
-            ...overlayPositions.positionStrategyLeft(),
-            originY: 'top',
-            overlayY: 'top',
-            offsetY,
-          });
-          break;
-        case OverlayPosition.RIGHT:
-          overrideOverlayPositions.push({
-            ...overlayPositions.positionStrategyRight(),
-            originY: 'top',
-            overlayY: 'top',
-            offsetY,
-          });
-          break;
-        case OverlayPosition.BOTTOM:
-          overrideOverlayPositions.push(
-            overlayPositions.positionStrategyBottom()
-          );
-          break;
-        case OverlayPosition.TOP:
-          overrideOverlayPositions.push(overlayPositions.positionStrategyTop());
-          break;
-        default:
-          break;
-      }
-    }
-    return overrideOverlayPositions;
+  private getOverlayPositions(): ConnectedPosition[] {
+    return [overlayPositions.positionStrategyTop()];
   }
 
   private calculateArrowPositions(
